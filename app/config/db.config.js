@@ -6,7 +6,7 @@ const db_name = process.env.DB_NAME;
 module.exports = {
   HOST: db_host,
   USER: db_user,
-  PASSWORD: db_pw,
+  PASSWORD: db_pw || "",
   DB: db_name,
   dialect: "mysql",
   pool: {
