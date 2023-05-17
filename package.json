@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "bundle": "mkdir deploy && cp -r app index.js package.json package-lock.json travel-backend.service .env deploy"
+    "bundle": "mkdir deploy && cp -r index.js package.json package-lock.json travel-backend.service deploy"
   },
   "repository": {
     "type": "git",
