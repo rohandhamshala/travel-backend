@@ -42,7 +42,7 @@ jobs:
           SOURCE: "deploy/"
           REMOTE_HOST: "ec2-3-129-70-98.us-east-2.compute.amazonaws.com"
           REMOTE_USER: ubuntu
-          TARGET: "nodeapps/recipe-backend"
+          TARGET: "/home/ubuntu/nodeapps/recipe-backend"
       - name: Execute SSH commmands on remote server
         uses: JimCronqvist/action-ssh@master
         env:
@@ -52,7 +52,7 @@ jobs:
           privateKey: ${{ secrets.SERVER_SSH_KEY }}
           debug: false
           command: |
-            cd nodeapps/recipe-backend
+            cd /home/ubuntu/nodeapps/recipe-backend
             npm install
             sudo systemctl stop recipe-backend
             sudo cp recipe-backend.service /lib/systemd/system/recipe-backend.service
